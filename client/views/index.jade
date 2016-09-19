@@ -1,0 +1,141 @@
+extends ./layout.jade
+block content
+    #index-banner.parallax-container
+        .section.no-pad-bot
+          .container
+            br
+            br
+            h1.header.center.teal-text.text-lighten-2 Parallax Theme
+            .row.center
+              h5.header.col.s12.light Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            .row.center
+              a.btn-large.waves-effect.waves-light.purple.lighten-1(href="#") Find more
+            br
+            br
+        .parallax
+            img(src="assets/images/dream-infrared-meadow-2220-824x550.jpg" alt="Unsplashed background img 2")
+
+    .container
+        .section
+
+          // Icon Section
+          .row
+            .col.s12.m4
+              .icon-block
+                h2.center(style="color:#333")
+                    i.material-icons grade
+                h5.center Feature one
+                p.light Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              
+
+            .col.s12.m4
+              .icon-block
+                h2.center(style="color:#333")
+                    i.material-icons build
+                h5.center Feature two
+                p.light Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+             
+            .col.s12.m4
+              .icon-block
+                h2.center(style="color:#333")
+                    i.material-icons shopping_cart
+                h5.center Feature three
+                p.light Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+
+    .parallax-container.valign-wrapper
+        .section.no-pad-bot
+          .container
+            .row.center
+              h5.header.col.s12(style="color: #333;") Vertically centered text
+        .parallax
+            img(src="assets/images/1412019519aax7e.jpg" alt="img")
+
+
+    .container.section.scrollspy#projects
+        .section
+          br
+          br
+          h4.center Our Work
+          br
+          .row
+            .col.s6
+                img.materialboxed.responsive-img(data-caption="Description about the work or project"  src="assets/images/blur-flowers-nature-471-827x550.jpg") 
+            .col.s6
+                img.materialboxed.responsive-img(data-caption="Description about the work or project"  src="assets/images/1415117217bc45x.jpg")
+          .row
+            .col.s6
+                img.materialboxed.responsive-img(data-caption="Description about the work or project" src="assets/images/1397154567yttyy.jpg")
+            .col.s6
+                img.materialboxed.responsive-img(data-caption="Description about the work or project" src="assets/images/1399827845b0i1k.jpg")
+          
+          .center
+            a.waves-effect.waves-light.btn.purple.lighten-1 View more
+
+
+    .parallax-container.valign-wrapper.section.scrollspy#aboutus
+        .section.no-pad-bot
+          .container
+            .center.row.col.s3
+                h3 About Us
+            .center.row.col.s12
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        .parallax
+            img(src="assets/images/1423255813yuwjj.jpg" alt="img")
+
+
+
+    .container.section.scrollspy#contactus
+        .section
+            br
+        br
+        h2 Contact Us   
+    
+        .row
+            form.col.s8(action="/contacts"  method="POST")
+                .row
+                  .input-field.col.s6
+                    input(id="name" type="text" name="name" class="validate")
+                    label(for="name") Your Name
+
+                  .input-field.col.s6
+                    input(id="email" type="email" name="email" class="validate")
+                    label(for="email") Your Email
+            
+                .row
+                  .input-field.col.s12
+                    input(id="message-sub" type="text" name="subject" class="validate")
+                    label(for="message-sub") Message Subject
+
+            
+                .row
+                  .input-field.col.s12
+                    textarea(id="text_area" name="message" class="materialize-textarea")
+                    label(for="text_area") Your Message
+        
+                div
+                    input.waves-effect.waves-light.btn.purple.lighten-1(type="submit" value="Send Message") 
+                    
+
+             
+            .col.s12.m4
+                p.
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+
+                ul.share-buttons
+                    li
+                        a(href="https://www.facebook.com/sharer/sharer.php?u=&t=" target="_blank" title="Share on Facebook")
+                            img(src="assets/images/flat_web_icon_set/inverted/Facebook.png")
+                    li
+                        a(href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet")
+                            img(src="assets/images/flat_web_icon_set/inverted/Twitter.png")
+                    li
+                        a(href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+")
+                            img(src="assets/images/flat_web_icon_set/inverted/GooglePlus.png")
+
+
+    footer.page-footer.purple.lighten-1
+        .footer-copyright
+          .container
+           p.
+            Copyright © Your website name

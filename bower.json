@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "description": "Portfolio for WeDevJS",
+  "authors": [
+    "WeDevJS"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/WeDevJS/portfolio",
+  "moduleType": [],
+  "dependencies": {
+    "normalize-css": "^4.2.0",
+    "jquery": "^3.1.0",
+    "materialize": "^0.97.7"
+  },
+  "devDependencies": {}
+}

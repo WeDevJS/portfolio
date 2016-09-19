@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio for WeDevJS",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeDevJS/portfolio.git"
+  },
+  "author": "WeDevJS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeDevJS/portfolio/issues"
+  },
+  "homepage": "https://github.com/WeDevJS/portfolio#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-redis": "^3.1.0",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.6.0",
+    "redis": "^2.6.2"
+  }
+}

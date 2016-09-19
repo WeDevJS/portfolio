@@ -1,0 +1,14 @@
+extends ./layout.jade
+block content
+	.container.margin-big-top.center-align
+		.row
+			h1 Iniciar Sesión
+			form.col.s12(action="/sessions" method="POST")
+				.row
+					.input-field.col.s12
+						input.validate(type="text" name="email" placeholder="Email")
+				.row
+					.input-field.col.s12
+						input.validate(type="password" name="password" placeholder="Password")
+				input.btn.left(type="submit" value="Login")
+				a.right(href="/signup") No poseo una cuenta

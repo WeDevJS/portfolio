@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
+        title Parallax Template
+        link(href="bower/materialize/dist/css/materialize.css" rel="stylesheet" media="screen,projection")
+        link(href="assets/css/style.css" rel="stylesheet" media="screen,projection")
+        link(rel="shortcut icon" href="images/favicon (8).ico" type="image/x-icon")
+        link(rel="icon" href="assets/images/favicon (8).ico" type="image/x-icon")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    body
+        // Navbar
+        .navbar-fixed.scrollspy#navbar
+            nav.white
+                .nav-wrapper.container
+                    .container
+                        a(href="#navbar" class="brand-logo") WeDevJS
+     
+                    a(href="#" data-activates="mobile-demo" class="button-collapse")
+                        i.mdi-navigation-menu
+                    ul.right.hide-on-med-and-down
+                        li
+                            a.head-link(href="#projects") Projects
+                        li
+                            a.head-link(href="#aboutus") About Us
+                        li
+                            a.head-link(href="#contactus") Contact Us
+
+                    ul.right.side-nav#mobile-demo
+                        li
+                            a.head-link(href="#projects") Projects
+                        li
+                            a.head-link(href="#aboutus") About Us
+                        li
+                            a.head-link(href="#contactus") Contact Us
+        block content
+    script(src="https://code.jquery.com/jquery-2.1.1.min.js")
+    script(src="bower/materialize/dist/js/materialize.js")
+    script(src="assets/js/init.js")
