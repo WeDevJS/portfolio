@@ -1,19 +1,19 @@
-extends layout
+extends ./layout.jade
 block content
     #index-banner.parallax-container
         .section.no-pad-bot
           .container
             br
             br
-            h1.header.center.teal-text.text-lighten-2 Parallax Theme
+            h1.header.center.white-text Parallax Theme
             .row.center
-              h5.header.col.s12.light Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              h5.header.col.s12.white-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             .row.center
-              a.btn-large.waves-effect.waves-light.purple.lighten-1(href="#") Find more
+              a.btn-large.waves-effect.waves-light.amber.darken-1.grey-text.text-darken-4(href="#") Find more
             br
             br
         .parallax
-            img(src="assets/images/dream-infrared-meadow-2220-824x550.jpg" alt="Unsplashed background img 2")
+            img(src="assets/images/javascript-code.jpg" alt="Unsplashed background img 2")
 
     .container
         .section
@@ -46,9 +46,9 @@ block content
         .section.no-pad-bot
           .container
             .row.center
-              h5.header.col.s12(style="color: #333;") Vertically centered text
+              h5.header.col.s12.white-text(style="color: #333;") Vertically centered text
         .parallax
-            img(src="assets/images/1412019519aax7e.jpg" alt="img")
+            img(src="assets/images/javascript-opt-.jpg" alt="img")
 
 
     .container.section.scrollspy#projects
@@ -59,29 +59,29 @@ block content
           br
           .row
             .col.s6
-                img.materialboxed.responsive-img(data-caption="Description about the work or project"  src="assets/images/blur-flowers-nature-471-827x550.jpg") 
+                img.materialboxed.responsive-img(data-caption="Description about the work or project"  src="assets/images/javascript (1).jpg") 
             .col.s6
-                img.materialboxed.responsive-img(data-caption="Description about the work or project"  src="assets/images/1415117217bc45x.jpg")
+                img.materialboxed.responsive-img(data-caption="Description about the work or project"  src="assets/images/nodejs-green.png")
           .row
             .col.s6
-                img.materialboxed.responsive-img(data-caption="Description about the work or project" src="assets/images/1397154567yttyy.jpg")
+                img.materialboxed.responsive-img(data-caption="Description about the work or project" src="assets/images/original.png")
             .col.s6
-                img.materialboxed.responsive-img(data-caption="Description about the work or project" src="assets/images/1399827845b0i1k.jpg")
+                img.materialboxed.responsive-img(data-caption="Description about the work or project" src="assets/images/0001494_search-engine-powered-by-mongodb.jpeg")
           
           .center
-            a.waves-effect.waves-light.btn.purple.lighten-1 View more
+            a.waves-effect.waves-light.btn.amber.darken-1 View more
 
 
     .parallax-container.valign-wrapper.section.scrollspy#aboutus
         .section.no-pad-bot
           .container
             .center.row.col.s3
-                h3 About Us
+                h3.white-text About Us
             .center.row.col.s12
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                p.white-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         .parallax
-            img(src="assets/images/1423255813yuwjj.jpg" alt="img")
+            img(src="assets/images/javascript.jpg" alt="img")
 
 
 
@@ -114,7 +114,7 @@ block content
                     label(for="text_area") Your Message
         
                 div
-                    input.waves-effect.waves-light.btn.purple.lighten-1(type="submit" value="Send Message") 
+                    input.waves-effect.waves-light.btn.amber.darken-1(type="submit" value="Send Message") 
                     
 
              
@@ -132,10 +132,3 @@ block content
                     li
                         a(href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+")
                             img(src="assets/images/flat_web_icon_set/inverted/GooglePlus.png")
-
-
-    footer.page-footer.purple.lighten-1
-        .footer-copyright
-          .container
-           p.
-            Copyright © Your website name
