@@ -2,15 +2,15 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var session= require("express-session");
-var Contact = require("./models/contact");
-var router = require("./routes");
-var session_middleware = require("./middlewares/session");
+var Contact = require("./server/models/contact");
+var router = require("./server/routes");
+var session_middleware = require("./server/middlewares/session");
 var redisStore= require("connect-redis")(session); 
 var path = require("path");
 
 var app= express();
 
-app.set('views', path.resolve('../client/views'));
+app.set('views', path.resolve('./client/views'));
 app.set("view engine","jade");
 
 var sessionRedisMiddleware= session({
@@ -19,8 +19,8 @@ var sessionRedisMiddleware= session({
     saveUninitialized: true,
     resave: false
 });
-app.use("/assets",express.static("../client/assets"));
-app.use("/bower",express.static("../client/bower_components"));
+app.use("/assets",express.static("./client/assets"));
+app.use("/bower",express.static("./client/bower_components"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
