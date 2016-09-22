@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "portfolio for WeDevJS",
-  "main": "gulpfile.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
