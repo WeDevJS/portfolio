@@ -7,8 +7,8 @@ var router = require("./server/routes");
 var session_middleware = require("./server/middlewares/session");
 var redisStore= require("connect-redis")(session); 
 var path = require("path");
-
 var app= express();
+var port = Number(process.env.PORT || 3000);
 
 app.set('views', path.resolve('./client/views'));
 app.set("view engine","jade");
@@ -79,4 +79,4 @@ app.post('/sessions',function(req,res) {
 app.use("/app",session_middleware);
 app.use("/app",router);
 
-app.listen(3000);
+app.listen(port);
