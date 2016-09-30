@@ -20,7 +20,7 @@ var sessionRedisMiddleware= session({
     resave: false
 });
 app.use("/assets",express.static("./client/assets"));
-app.use("/bower",express.static("./bower_components"));
+app.use("/bower",express.static("./client/bower_components"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
