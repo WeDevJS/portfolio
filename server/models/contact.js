@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-mongoose.connect("mongodb://localhost/portfolio-wedevjs");
+mongoose.connect("mongodb://garra:garra302@ds041486.mlab.com:41486/events-garraxxi");
 
 var email_match=[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"Format email is not validate."];
 
