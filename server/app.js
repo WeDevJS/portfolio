@@ -4,6 +4,8 @@ var methodOverride = require("method-override");
 var session= require("express-session");
 var Contact = require("./models/contact");
 var router = require("./routes");
+var usersController = require('./controllers/users.controller');
+var contactsController = require('./controllers/contacts.controller');
 var session_middleware = require("./middlewares/session");
 var redisStore= require("connect-redis")(session); 
 var path = require("path");
@@ -38,43 +40,9 @@ app.get('/signup',function(req,res) {
     res.render('signup');
 });
 
-app.post('/contacts',function(req,res) {
-    var contact=new Contact({
-            name: req.body.name,
-            email: req.body.email,
-            message_subject: req.body.subject,
-            message: req.body.message
-    });
-    contact.save(function(err,contact){
-        if(!err){
-            res.redirect('/');
-        }
-        else{
-            console.log(err);
-        }
-    });
-});
-
-app.post('/sessions',function(req,res) {
-    User.findOne({
-        email: req.body.email,
-        password: req.body.password
-    },function(err,user){
-        if(!err){
-            if(user!=null){
-                req.session.user_id=user._id;
-                res.redirect("/app");
-            }
-            else{
-                res.redirect("/login");
-            }
-        }
-        else
-        {
-            res.render(err);
-        }
-    });
-});
+app.post('/contacts',contactsController.create);
+app.post('/sessions',usersController.session);
+app.post('/users',usersController.create);
 
 app.use("/app",session_middleware);
 app.use("/app",router);

@@ -1,14 +1,23 @@
 var express= require("express");
 var router= express.Router();
-var contactController= require("./controllers/contacts.controller");
+var contactsController= require("./controllers/contacts.controller");
+var usersController = require("./controllers/users.controller");
+
+//Routes app
+router.get('/',function(req,res){
+	res.render('app/home');
+});
+
+//Routes Session
+// router.get("/",usersController)
 
 //Routes contact
-router.get('/contacts', contactController.index);
-router.get('/contacts/:id', contactController.show);
-router.post('/contacts', contactController.create);
-router.put('/contacts/:id', contactController.update);
-router.patch('/contacts/:id', contactController.update);
-router.delete('/contacts/:id', contactController.delete);
+router.get('/contacts', contactsController.index);
+router.get('/contacts/:id', contactsController.show);
+router.post('/contacts', contactsController.create);
+router.put('/contacts/:id', contactsController.update);
+router.patch('/contacts/:id', contactsController.update);
+router.delete('/contacts/:id', contactsController.delete);
 
 
 module.exports = router;

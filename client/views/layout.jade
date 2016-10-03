@@ -11,6 +11,7 @@ html(lang="en")
         link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
         // Navbar
+        .container
         .navbar-fixed.scrollspy#navbar
             nav.white
                 .nav-wrapper.container
@@ -26,6 +27,14 @@ html(lang="en")
                             a.head-link(href="#aboutus") About Us
                         li
                             a.head-link(href="#contactus") Contact Us
+                        if(!user)
+                            li
+                                a(href="/login") Login
+                            li
+                                a(href="/signup") Sign Up
+                        if(user)
+                            li
+                                a(href="#") #{user.username}
 
                     ul.right.side-nav#mobile-demo
                         li
@@ -34,6 +43,14 @@ html(lang="en")
                             a.head-link(href="#aboutus") About Us
                         li
                             a.head-link(href="#contactus") Contact Us
+                        if(!user)
+                            li
+                                a(href="/login") Login
+                            li
+                                a(href="/signup") Sign Up
+                        if(user)
+                            li
+                                a(href="#") #{user.username}
         block content
     footer.page-footer.amber.darken-1
         .footer-copyright
