@@ -7,7 +7,8 @@ var router = require("./routes");
 var usersController = require('./controllers/users.controller');
 var contactsController = require('./controllers/contacts.controller');
 var session_middleware = require("./middlewares/session");
-var redisStore= require("connect-redis")(session); 
+// var redisStore= require("connect-redis")(session); 
+var MongoStore = require('connect-mongo')(session);
 var path = require("path");
 var app= express();
 var port = Number(process.env.PORT || 3000);
@@ -16,12 +17,15 @@ app.set('views', path.resolve('./client/views'));
 app.set("view engine","jade");
 
 var sessionRedisMiddleware= session({
-    store: new redisStore({}),
+    store: new MongoStore({
+    	url: "mongodb://garra:garra302@ds041486.mlab.com:41486/events-garraxxi",
+    	collection:'sessions'
+    }),
     secret: "1233adasdamvasdasdqw3 ads",
     saveUninitialized: true,
-    resave: false,
+    resave: true,
     cookie: { 
-    	domain:'wedevjs.herokuapp.com',
+    	domain:'https://wedevjs.herokuapp.com',
     	path: '/', 
     	secure: true
     }
