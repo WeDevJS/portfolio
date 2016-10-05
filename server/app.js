@@ -24,11 +24,11 @@ var sessionRedisMiddleware= session({
     secret: "1233adasdamvasdasdqw3 ads",
     saveUninitialized: true,
     resave: true,
-    cookie: { 
-    	domain:'https://wedevjs.herokuapp.com',
-    	path: '/', 
-    	secure: true
-    }
+    // cookie: { 
+    // 	domain:'https://wedevjs.herokuapp.com',
+    // 	path: '/', 
+    // 	secure: true
+    // }
 });
 app.use("/assets",express.static("./client/assets"));
 app.use("/bower",express.static("./client/bower_components"));
