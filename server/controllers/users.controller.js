@@ -39,7 +39,7 @@ module.exports = {
 	    },function(err,user){
 	        if(!err){
 	            if(user!=null){
-	                req.session.user_id=user._id;
+	                // req.session.user_id=user._id;
 	                res.redirect("/app");
 	            }
 	            else{
