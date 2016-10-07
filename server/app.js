@@ -6,6 +6,7 @@ var Contact = require("./models/contact");
 var router = require("./routes");
 var usersController = require('./controllers/users.controller');
 var contactsController = require('./controllers/contacts.controller');
+var sessionsController = require('./controllers/sessions.controller');
 var session_middleware = require("./middlewares/session");
 // var redisStore= require("connect-redis")(session); 
 var MongoStore = require('connect-mongo')(session);
@@ -18,7 +19,7 @@ app.set("view engine","jade");
 
 var sessionRedisMiddleware= session({
     store: new MongoStore({
-    	url: "mongodb://garra:garra302@ds041486.mlab.com:41486/events-garraxxi",
+    	url: "mongodb://wedevjs:wedevjs99@ds047166.mlab.com:47166/portfolio",
     	collection:'sessions'
     }),
     secret: "1233adasdamvasdasdqw3 ads",
@@ -49,9 +50,12 @@ app.get('/signup',function(req,res) {
     res.render('signup');
 });
 
-app.post('/contacts',contactsController.create);
-app.post('/sessions',usersController.session);
-app.post('/users',usersController.create);
+
+app.post('/contacts',contactsController.create); //insertar un contacto nuevo
+app.post('/sessions',sessionsController.session); //inicio de session
+app.post('/users',usersController.create); //insertar un nuevo usuario
+app.post('/logout',sessionsController.logout); //destruir la session
+
 
 app.use("/app",session_middleware);
 app.use("/app",router);

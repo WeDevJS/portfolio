@@ -31,25 +31,5 @@ module.exports = {
 	delete : function(req,res){
 
 
-	},
-	session : function(req,res){
-		User.findOne({
-	        email: req.body.email,
-	        password: req.body.password
-	    },function(err,user){
-	        if(!err){
-	            if(user!=null){
-	                req.session.user_id=user._id;
-	                res.redirect("/app");
-	            }
-	            else{
-	                res.redirect("/login");
-	            }
-	        }
-	        else
-	        {
-	            res.render(err);
-	        }
-	    });
 	}
 };

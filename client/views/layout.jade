@@ -7,7 +7,7 @@ html(lang="en")
         link(href="bower/materialize/dist/css/materialize.css" rel="stylesheet" media="screen,projection")
         link(href="assets/css/style.css" rel="stylesheet" media="screen,projection")
         link(rel="shortcut icon" href="assets/images/favicon (8).ico" type="image/x-icon")
-        link(rel="icon" href="assets/images/favicon (8).ico" type="image/x-icon")
+        link(rel="icon" href="assets/images/favicon (3).ico" type="image/x-icon")
         link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
         // Navbar
@@ -34,7 +34,20 @@ html(lang="en")
                                 a(href="/signup") Sign Up
                         if(user)
                             li
-                                a(href="#") #{user.username}
+                                a(href="#" class='dropdown-button' data-activates='dropdown1') #{user.username}
+                                ul(id='dropdown1' class='dropdown-content')
+                                    li
+                                        a(href="#!") Edit profile
+                                    li
+                                        a(href="#!") Change profile picture
+                                    li
+                                        a(href="#!") Change password
+                                    li
+                                        a(href="#!") Manage social accounts
+                                    li.divider
+                                    form(method="POST" action="/logout")
+                                        li
+                                            button(href="/logout" type="submit") Logout
 
                     ul.right.side-nav#mobile-demo
                         li
