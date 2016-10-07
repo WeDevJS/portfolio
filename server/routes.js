@@ -8,9 +8,6 @@ router.get('/',function(req,res){
 	res.render('app/home');
 });
 
-//Routes Session
-// router.get("/",usersController)
-
 //Routes contact
 router.get('/contacts', contactsController.index);
 router.get('/contacts/:id', contactsController.show);

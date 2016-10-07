@@ -10,6 +10,21 @@ p {
   line-height: 2rem;
 }
 
+img.img-profile{
+  /*width: 10%;*/
+
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+
+}
+a.span-profile{
+  padding-right: 70px;
+}
+
 .button-collapse {
   color: #ee6e73;
 }
@@ -39,7 +54,6 @@ p {
     top: 0;
   }
 }
-
 
 .icon-block {
   padding: 0 15px;

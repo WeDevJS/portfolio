@@ -34,7 +34,8 @@ html(lang="en")
                                 a(href="/signup") Sign Up
                         if(user)
                             li
-                                a(href="#" class='dropdown-button' data-activates='dropdown1') #{user.username}
+                                img(class="img-profile" src="assets/images/user2.png", alt="")
+                                a(href="#" class='dropdown-button span-profile' data-activates='dropdown1') #{user.username}
                                 ul(id='dropdown1' class='dropdown-content')
                                     li
                                         a(href="#!") Edit profile
@@ -45,9 +46,9 @@ html(lang="en")
                                     li
                                         a(href="#!") Manage social accounts
                                     li.divider
-                                    form(method="POST" action="/logout")
+                                    form(method="POST" action="/logout" name="logout")
                                         li
-                                            button(href="/logout" type="submit") Logout
+                                            a(href="javascript: logout()") Logout
 
                     ul.right.side-nav#mobile-demo
                         li
