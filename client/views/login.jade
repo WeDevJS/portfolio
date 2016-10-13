@@ -2,7 +2,7 @@ extends ./layout.jade
 block content
 	.container.margin-big-top.center-align
 		.row
-			h1 Iniciar Sesión
+			h1 Login
 			form.col.s12(action="/sessions" method="POST")
 				.row
 					.input-field.col.s12
@@ -11,5 +11,5 @@ block content
 					.input-field.col.s12
 						input.validate(type="password" name="password" placeholder="Password")
 				input.waves-effect.waves-light.btn.amber.darken-1.left(type="submit" value="Login")
-				a.right(href="/signup") No poseo una cuenta
+				a.right(href="/signup") I do not have an account
 	

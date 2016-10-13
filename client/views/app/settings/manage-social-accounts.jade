@@ -1,8 +1,8 @@
-extends ./layout.jade
+extends ../../layout.jade
 block content
 	.container.margin-big-top.center-align
 		.row
-			h1 Sign Up
+			h1 Registrar Usuario
 			form.col.s12(action="/users",method="POST")
 				.row
 					.input-field.col.s6
@@ -14,5 +14,5 @@ block content
 						input.validate(type="password" name="password" placeholder="Password")
 					.input-field.col.s6
 						input.validate(type="password" name="password_confirmation" placeholder="password confirmation")
-				input.btn.left(type="submit" value="Sign Up")
-				a.right(href="/login") I already have an account
+				input.btn.left(type="submit" value="Registrarse")
+				a.right(href="/login") ya tengo cuenta

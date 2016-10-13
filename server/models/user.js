@@ -31,19 +31,10 @@ var user_schema= new Schema({
 		validate: password_validate,
 		minLength: [8,"Password debe tener mas de 8 caracteres"]
 	},
-	sexo:{
-		type: String,
-		enum:{
-			values:sexo,
-			message: "Opcion no valida"
-		}
-	},
-	age:{
-		type: Number,
-		min: [5,"La edad debe ser mayor a 5 años"],
-		max: [100,"La edad debe ser menor a 100 años"]
-	},
-	birth_of_date: Date
+	birth_of_date: Date,
+	profile_image:{
+		type:String
+	}
 });
 
 
