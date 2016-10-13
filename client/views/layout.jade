@@ -4,10 +4,10 @@ html(lang="en")
         meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
         title WeDevJS
-        link(href="bower/materialize/dist/css/materialize.css" rel="stylesheet" media="screen,projection")
-        link(href="assets/css/style.css" rel="stylesheet" media="screen,projection")
-        link(rel="shortcut icon" href="assets/images/favicon (8).ico" type="image/x-icon")
-        link(rel="icon" href="assets/images/favicon (3).ico" type="image/x-icon")
+        link(href="/bower/materialize/dist/css/materialize.css" rel="stylesheet" media="screen,projection")
+        link(href="/assets/css/style.css" rel="stylesheet" media="screen,projection")
+        link(rel="shortcut icon" href="/assets/images/favicon (3).ico" type="image/x-icon")
+        link(rel="icon" href="/assets/images/favicon (3).ico" type="image/x-icon")
         link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
         // Navbar
@@ -34,15 +34,15 @@ html(lang="en")
                                 a(href="/signup") Sign Up
                         if(user)
                             li
-                                img(class="img-profile" src="assets/images/user2.png", alt="")
+                                img(class="img-profile" src="/assets/images/user2.png", alt="")
                                 a(href="#" class='dropdown-button span-profile' data-activates='dropdown1') #{user.username}
                                 ul(id='dropdown1' class='dropdown-content')
                                     li
-                                        a(href="#!") Edit profile
+                                        a(href="/app/settings/account") Edit profile
                                     li
-                                        a(href="#!") Change profile picture
+                                        a(href="/app/settings/picture") Change profile picture
                                     li
-                                        a(href="#!") Change password
+                                        a(href="/app/settings/password") Change password
                                     li
                                         a(href="#!") Manage social accounts
                                     li.divider
@@ -72,5 +72,5 @@ html(lang="en")
            p.
             Copyright 2016 © WeDevJS
     script(src="https://code.jquery.com/jquery-2.1.1.min.js")
-    script(src="bower/materialize/dist/js/materialize.js")
-    script(src="assets/js/init.js")
+    script(src="/bower/materialize/dist/js/materialize.js")
+    script(src="/assets/js/init.js")

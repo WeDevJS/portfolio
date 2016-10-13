@@ -1,0 +1,22 @@
+extends ../../layout.jade
+block content
+	.container.margin-big-top.center-align
+		.row
+			h1 Account
+			h6.grey-text Change your basic account and language settings.
+			form.col.s12(action="/users",method="POST")
+				.row
+					.input-field.col.s6
+						input.validate(type="text" name="name" placeholder="Name")
+					.input-field.col.s6
+						input.validate(type="text" name="last_name" placeholder="Last Name")
+				.row
+					.input-field.col.s6
+						input.validate(type="text" name="email" placeholder="Email")
+					.input-field.col.s6
+						input.validate(type="text" name="username" placeholder="Username")
+				.row
+					.input-field.col.s6
+						input.validate(type="date" name="birth_of_date" placeholder="Birth of date")
+				
+				input.btn.left(type="submit" value="Save changes")

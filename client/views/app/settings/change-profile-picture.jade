@@ -1,0 +1,12 @@
+extends ../../layout.jade
+block content
+	.container.margin-big-top.center-align
+		.row
+			h1 Profile Picture
+			form.col.s12(action="/users",method="POST")
+				.row
+					.input-field.center-align
+						img.user-profile-picture(src="/assets/images/user2.png", alt="")
+					.input-field.center-align
+						span(class="btn btn-default btn-file") Seleccionar Imagen 
+							input(type="file" ngf-select ng-model="imageFile" name="file" accept="image/*" ngf-max-size="2MB" required)
